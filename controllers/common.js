@@ -6,7 +6,9 @@ exports.convertHtmlToBytes = function (req, res, next) {
     (async () => {
 
         // Create a browser instance
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+        executablePath: '/usr/bin/chromium-browser'
+        });
       
         // Create a new page
         const page = await browser.newPage();

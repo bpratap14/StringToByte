@@ -31,8 +31,8 @@ exports.convertHtmlToBytes = function (req, res, next) {
         // Close the browser instance
         await browser.close();
         return res.status(200).json({
-            status: 0,
-            message: "accessgggg.",
+            status: 1,
+            message: "success.",
             data:buffer
           });
       })();
